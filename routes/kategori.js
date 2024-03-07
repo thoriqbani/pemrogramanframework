@@ -34,11 +34,11 @@ router.post('/store', async function(req, res){
             nama
         }
         await model_kategori.Store(Data)
-        req.flash('sucess', 'Berhasil menyimpan')
+        req.flash('success', 'Berhasil menyimpan')
         res.redirect('/kategori')
     } catch {
-        req.flash('error', 'Terjadi Kesalahan')
         res.redirect('/kategori')
+        req.flash('error', 'Terjadi Kesalahan')
     }
 })
 
@@ -49,7 +49,8 @@ router.post('/update/(:id)', async function(req, res){
         const Data = {
             nama        
         }
-        await model_kategori.Update(id, Data) 
+        await model_kategori.Update(id, Data)
+        req.flash('success', 'Berhasil mengupdate')
         res.redirect('/kategori')
     } catch(error) {
         req.flash('error','terjadi kesalahan pada fungsi')

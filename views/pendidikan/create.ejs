@@ -1,0 +1,38 @@
+<%- include('../partials/header') %>
+<div class="container mt-5">
+  <form action="/pendidikan/store" method="POST">
+    <div class="mb-3">
+      <label for="nama_instansi" class="form-label">Nama Instansi</label>
+      <input type="text" class="form-control" name="nama_instansi" required>
+    </div>
+    <div class="mb-3">
+      <label for="jurusan" class="form-label">Jurusan</label>
+      <input type="text" class="form-control" name="jurusan"
+      required>
+    </div>
+    <div class="mb-3">
+      <label for="tahun_masuk" class="form-label">Tahun Masuk</label>
+      <input type="text" class="form-control" name="tahun_masuk"required>
+    </div>
+    <div class="mb-3">
+      <label for="tahun_lulus" class="form-label">Tahun 
+      Lulus</label>
+      <input type="text" class="form-control" name="tahun_lulus"
+      required>
+    </div>
+    <div class="mb-3">
+      <label for="nomor_ijazah" class="form-label">Nomor 
+      Ijazah</label>
+      <input type="text" class="form-control" name="nomor_ijazah"
+      required>
+      </div>
+      <div class="mb-3">
+        <label for="id_mahasiswa" class="form-label">ID Mahasiswa</label>
+        <input type="text" class="form-control" name="id_mahasiswa"required>
+      </div>
+      <div class="mb-3">
+        <button type="submit" class="btn btn-sm btnsuccess">Simpan</button>
+      </div>
+    </form>
+  </div
+  <%- include('../partials/footer') %>
